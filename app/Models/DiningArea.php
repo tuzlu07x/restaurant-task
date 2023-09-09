@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Restaurant extends Model
+class DiningArea extends Model
 {
     use HasFactory;
     protected $fillable = ['name'];
@@ -19,6 +19,6 @@ class Restaurant extends Model
 
     public function diningAreaRestaurants(): BelongsToMany
     {
-        return $this->belongsToMany(DiningArea::class, 'dining_area_restaurants', 'restaurant_id', 'dining_area_id');
+        return $this->belongsToMany(DiningArea::class, 'dining_area_restaurants', 'dining_area_id', 'restaurant_id');
     }
 }

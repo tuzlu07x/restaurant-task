@@ -25,7 +25,7 @@ return new class extends Migration
 
             $table->boolean('active');
 
-            $$table->timestamps();
+            $table->timestamps();
         });
     }
 

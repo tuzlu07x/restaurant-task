@@ -14,8 +14,16 @@
     },
     "dependencies": {
         "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+        "@emotion/react": "^11.11.1",
+        "@emotion/styled": "^11.11.0",
+        "@inertiajs/inertia": "^0.11.1",
         "@inertiajs/inertia-react": "^0.8.1",
         "@inertiajs/react": "^1.0.0",
-        "react-dom": "^18.2.0"
+        "@mui/icons-material": "^5.14.8",
+        "@mui/material": "^5.14.8",
+        "@mui/styled-engine-sc": "^5.14.8",
+        "moment": "^2.29.4",
+        "react-dom": "^18.2.0",
+        "styled-components": "^5.3.11"
     }
 }

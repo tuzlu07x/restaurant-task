@@ -18,4 +18,4 @@ use Inertia\Inertia;
 // Route::get('/', function () {
 //     return Inertia::render('Test');
 // });
-Route::get('/', [RestaurantController::class, 'index'])->name('restaurant.lists');
+Route::get('/restaurants', [RestaurantController::class, 'index'])->name('restaurant.index');

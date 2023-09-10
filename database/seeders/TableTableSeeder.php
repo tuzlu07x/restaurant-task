@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class TablesTableSeeder extends Seeder
+class TableTableSeeder extends Seeder
 {
 
     /**
@@ -14,14 +14,14 @@ class TablesTableSeeder extends Seeder
      */
     public function run()
     {
-        
+
 
         \DB::table('tables')->delete();
-        
-        \DB::table('tables')->insert(array (
-            0 => 
-            array (
-                'active' => 1,
+
+        \DB::table('tables')->insert(array(
+            0 =>
+            array(
+                'is_active' => 1,
                 'created_at' => '2023-09-09 16:17:56',
                 'dining_area_id' => 1,
                 'id' => 1,
@@ -31,9 +31,9 @@ class TablesTableSeeder extends Seeder
                 'restaurant_id' => 1,
                 'updated_at' => '2023-09-09 16:18:02',
             ),
-            1 => 
-            array (
-                'active' => 1,
+            1 =>
+            array(
+                'is_active' => 1,
                 'created_at' => '2023-09-09 16:18:05',
                 'dining_area_id' => 1,
                 'id' => 2,
@@ -43,9 +43,9 @@ class TablesTableSeeder extends Seeder
                 'restaurant_id' => 1,
                 'updated_at' => '2023-09-09 16:18:08',
             ),
-            2 => 
-            array (
-                'active' => 1,
+            2 =>
+            array(
+                'is_active' => 1,
                 'created_at' => '2023-09-09 16:18:13',
                 'dining_area_id' => 1,
                 'id' => 3,
@@ -55,9 +55,9 @@ class TablesTableSeeder extends Seeder
                 'restaurant_id' => 1,
                 'updated_at' => '2023-09-09 16:18:16',
             ),
-            3 => 
-            array (
-                'active' => 1,
+            3 =>
+            array(
+                'is_active' => 1,
                 'created_at' => '2023-09-09 16:18:21',
                 'dining_area_id' => 1,
                 'id' => 4,
@@ -67,9 +67,9 @@ class TablesTableSeeder extends Seeder
                 'restaurant_id' => 1,
                 'updated_at' => '2023-09-09 16:18:24',
             ),
-            4 => 
-            array (
-                'active' => 0,
+            4 =>
+            array(
+                'is_active' => 0,
                 'created_at' => '2023-09-09 16:19:48',
                 'dining_area_id' => 1,
                 'id' => 5,
@@ -79,9 +79,9 @@ class TablesTableSeeder extends Seeder
                 'restaurant_id' => 1,
                 'updated_at' => '2023-09-09 16:19:48',
             ),
-            5 => 
-            array (
-                'active' => 0,
+            5 =>
+            array(
+                'is_active' => 0,
                 'created_at' => '2023-09-09 16:19:48',
                 'dining_area_id' => 1,
                 'id' => 6,
@@ -91,9 +91,9 @@ class TablesTableSeeder extends Seeder
                 'restaurant_id' => 1,
                 'updated_at' => '2023-09-09 16:19:48',
             ),
-            6 => 
-            array (
-                'active' => 1,
+            6 =>
+            array(
+                'is_active' => 1,
                 'created_at' => '2023-09-09 16:19:48',
                 'dining_area_id' => 2,
                 'id' => 7,
@@ -103,9 +103,9 @@ class TablesTableSeeder extends Seeder
                 'restaurant_id' => 1,
                 'updated_at' => '2023-09-09 16:19:48',
             ),
-            7 => 
-            array (
-                'active' => 1,
+            7 =>
+            array(
+                'is_active' => 1,
                 'created_at' => '2023-09-09 16:19:48',
                 'dining_area_id' => 2,
                 'id' => 8,
@@ -115,9 +115,9 @@ class TablesTableSeeder extends Seeder
                 'restaurant_id' => 1,
                 'updated_at' => '2023-09-09 16:19:48',
             ),
-            8 => 
-            array (
-                'active' => 1,
+            8 =>
+            array(
+                'is_active' => 1,
                 'created_at' => '2023-09-09 16:19:48',
                 'dining_area_id' => 2,
                 'id' => 9,
@@ -127,9 +127,9 @@ class TablesTableSeeder extends Seeder
                 'restaurant_id' => 1,
                 'updated_at' => '2023-09-09 16:19:48',
             ),
-            9 => 
-            array (
-                'active' => 1,
+            9 =>
+            array(
+                'is_active' => 1,
                 'created_at' => '2023-09-09 16:19:48',
                 'dining_area_id' => 2,
                 'id' => 10,
@@ -139,9 +139,9 @@ class TablesTableSeeder extends Seeder
                 'restaurant_id' => 1,
                 'updated_at' => '2023-09-09 16:19:48',
             ),
-            10 => 
-            array (
-                'active' => 1,
+            10 =>
+            array(
+                'is_active' => 1,
                 'created_at' => '2023-09-09 16:19:48',
                 'dining_area_id' => 2,
                 'id' => 11,
@@ -151,9 +151,9 @@ class TablesTableSeeder extends Seeder
                 'restaurant_id' => 1,
                 'updated_at' => '2023-09-09 16:19:48',
             ),
-            11 => 
-            array (
-                'active' => 1,
+            11 =>
+            array(
+                'is_active' => 1,
                 'created_at' => '2023-09-09 16:19:48',
                 'dining_area_id' => 1,
                 'id' => 12,
@@ -163,9 +163,9 @@ class TablesTableSeeder extends Seeder
                 'restaurant_id' => 2,
                 'updated_at' => '2023-09-09 16:19:48',
             ),
-            12 => 
-            array (
-                'active' => 1,
+            12 =>
+            array(
+                'is_active' => 1,
                 'created_at' => '2023-09-09 16:19:48',
                 'dining_area_id' => 1,
                 'id' => 13,
@@ -175,9 +175,9 @@ class TablesTableSeeder extends Seeder
                 'restaurant_id' => 2,
                 'updated_at' => '2023-09-09 16:19:48',
             ),
-            13 => 
-            array (
-                'active' => 1,
+            13 =>
+            array(
+                'is_active' => 1,
                 'created_at' => '2023-09-09 16:19:48',
                 'dining_area_id' => 3,
                 'id' => 14,
@@ -187,9 +187,9 @@ class TablesTableSeeder extends Seeder
                 'restaurant_id' => 2,
                 'updated_at' => '2023-09-09 16:19:48',
             ),
-            14 => 
-            array (
-                'active' => 1,
+            14 =>
+            array(
+                'is_active' => 1,
                 'created_at' => '2023-09-09 16:19:48',
                 'dining_area_id' => 3,
                 'id' => 15,
@@ -200,7 +200,5 @@ class TablesTableSeeder extends Seeder
                 'updated_at' => '2023-09-09 16:19:48',
             ),
         ));
-        
-        
     }
 }

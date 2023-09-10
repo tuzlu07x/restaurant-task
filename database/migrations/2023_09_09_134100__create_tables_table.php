@@ -23,7 +23,7 @@ return new class extends Migration
             $table->integer('minimum_capacity');
             $table->integer('maximum_capacity');
 
-            $table->boolean('active');
+            $table->boolean('is_active')->default(true);
 
             $table->timestamps();
         });

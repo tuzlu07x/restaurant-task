@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -19,5 +20,10 @@ class Table extends Model
     public function diningArea(): BelongsTo
     {
         return $this->belongsTo(DiningArea::class);
+    }
+
+    public function scopeFilter(Builder $query, ?bool $isActive): Builder
+    {
+        return $query->when($isActive !== null, fn ($query) => $query->where('is_active', $isActive));
     }
 }

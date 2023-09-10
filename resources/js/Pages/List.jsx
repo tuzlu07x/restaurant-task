@@ -6,10 +6,10 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 
-export default function List({ groupedDiningAreas }) {
+export default function List({ restaurants }) {
     const { get } = useForm();
     const [isActive, setIsActive] = useState(null);
-
+    console.log(restaurants);
     useEffect(() => {
         if (isActive === true) {
             get(route("restaurant.index", { isActive: isActive }));
@@ -20,70 +20,109 @@ export default function List({ groupedDiningAreas }) {
         <>
             <React.Fragment>
                 <CardContent sx={{ background: "#ABEDF7" }}>
-                    {groupedDiningAreas.greenrestaurant.map(
-                        (greenrestaurant) => (
+                    {restaurants.bluerestaurant.indoorarea.map((res) => (
+                        <>
+                            <Typography variant="h6" component="div">
+                                Dining Area :{" "}
+                                <small>{res.dining_area.name}</small>
+                            </Typography>
+                            <Typography>
+                                Table Name : <small>{res.name}</small>
+                            </Typography>
+                            <Typography>
+                                Restaurant Name :{" "}
+                                <small>{res.restaurant.name}</small>
+                            </Typography>
+                            <Typography>
+                                Min Capacity :{" "}
+                                <small>{res.minimum_capacity}</small>
+                            </Typography>
+                            <Typography>
+                                Max Capacity :{" "}
+                                <small>{res.maximum_capacity}</small>
+                            </Typography>
+                        </>
+                    ))}
+                </CardContent>
+
+                <CardContent sx={{ background: "#ABEDF7" }}>
+                    {restaurants.bluerestaurant.outhdoorterracearea.map(
+                        (res) => (
                             <>
                                 <Typography variant="h6" component="div">
                                     Dining Area :{" "}
-                                    <small>{greenrestaurant.name}</small>
+                                    <small>{res.dining_area.name}</small>
                                 </Typography>
-                                {greenrestaurant.tables.map((item) => (
-                                    <>
-                                        <Typography>
-                                            Table Name :{" "}
-                                            <small>{item.name}</small> Dining
-                                            Area Name :{" "}
-                                            <small>
-                                                {item.dining_area.name}
-                                            </small>{" "}
-                                            Minimum Capacity :{" "}
-                                            <small>
-                                                {" "}
-                                                {item.minimum_capacity}
-                                            </small>{" "}
-                                            Maximum Capacity :{" "}
-                                            <small>
-                                                {item.maximum_capacity}
-                                            </small>
-                                        </Typography>
-                                    </>
-                                ))}
+                                <Typography>
+                                    Table Name : <small>{res.name}</small>
+                                </Typography>
+                                <Typography>
+                                    Restaurant Name :{" "}
+                                    <small>{res.restaurant.name}</small>
+                                </Typography>
+                                <Typography>
+                                    Min Capacity :{" "}
+                                    <small>{res.minimum_capacity}</small>
+                                </Typography>
+                                <Typography>
+                                    Max Capacity :{" "}
+                                    <small>{res.maximum_capacity}</small>
+                                </Typography>
                             </>
                         )
                     )}
                 </CardContent>
 
                 <CardContent sx={{ background: "#ABEDF7", marginTop: 10 }}>
-                    {groupedDiningAreas.bluerestaurant.map(
-                        (greenrestaurant) => (
-                            <>
-                                <Typography variant="h6" component="div">
-                                    Dining Area :{" "}
-                                    <small>{greenrestaurant.name}</small>
-                                </Typography>
-                                {greenrestaurant.tables.map((item) => (
-                                    <>
-                                        <Typography>
-                                            Table Name :{" "}
-                                            <small>{item.name}</small> Dining
-                                            Area Name :{" "}
-                                            <small>
-                                                {item.dining_area.name}
-                                            </small>
-                                            Minimum Capacity :{" "}
-                                            <small>
-                                                {item.minimum_capacity}
-                                            </small>{" "}
-                                            Maximum Capacity :{" "}
-                                            <small>
-                                                {item.maximum_capacity}
-                                            </small>
-                                        </Typography>
-                                    </>
-                                ))}
-                            </>
-                        )
-                    )}
+                    {restaurants.greenrestaurant.indoorarea.map((res) => (
+                        <>
+                            <Typography variant="h6" component="div">
+                                Dining Area :{" "}
+                                <small>{res.dining_area.name}</small>
+                            </Typography>
+                            <Typography>
+                                Table Name : <small>{res.name}</small>
+                            </Typography>
+                            <Typography>
+                                Restaurant Name :{" "}
+                                <small>{res.restaurant.name}</small>
+                            </Typography>
+                            <Typography>
+                                Min Capacity :{" "}
+                                <small>{res.minimum_capacity}</small>
+                            </Typography>
+                            <Typography>
+                                Max Capacity :{" "}
+                                <small>{res.maximum_capacity}</small>
+                            </Typography>
+                        </>
+                    ))}
+                </CardContent>
+
+                <CardContent sx={{ background: "#ABEDF7" }}>
+                    {restaurants.greenrestaurant.outhdoorarea.map((res) => (
+                        <>
+                            <Typography variant="h6" component="div">
+                                Dining Area :{" "}
+                                <small>{res.dining_area.name}</small>
+                            </Typography>
+                            <Typography>
+                                Table Name : <small>{res.name}</small>
+                            </Typography>
+                            <Typography>
+                                Restaurant Name :{" "}
+                                <small>{res.restaurant.name}</small>
+                            </Typography>
+                            <Typography>
+                                Min Capacity :{" "}
+                                <small>{res.minimum_capacity}</small>
+                            </Typography>
+                            <Typography>
+                                Max Capacity :{" "}
+                                <small>{res.maximum_capacity}</small>
+                            </Typography>
+                        </>
+                    ))}
                 </CardContent>
 
                 <CardActions>

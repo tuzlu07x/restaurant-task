@@ -15,7 +15,7 @@ class KanyeController extends Controller
         $kanye = new Kanye($uri);
         $getRes = new GetResponse($kanye);
         $kanyeData = $getRes->getRandomSentence($uri);
-
+        //I hadn't used DB. I know that it is not optimize.
         return Inertia::render('Kanye', compact('kanyeData'));
     }
 }

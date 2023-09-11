@@ -51,3 +51,18 @@ You can access the RESTful endpoint by following the relevant routing in the Res
 ## Notes
 
 For more information or documentation about the project, refer to the project's source code and relevant documentation.
+
+# Second Excercise
+
+## First
+
+    if you wanna see my API you should go to app/Entegration/Kanye
+
+    you go to this address for login http://localhost:8000/login
+
+```
+    email = test@test.com
+    password = 123456789
+```
+
+And after you logined the page redirect this address http://localhost:8000/kanye

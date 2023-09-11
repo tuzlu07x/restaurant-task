@@ -31,6 +31,7 @@ export default function MultilineTextFields({ kanyeData }) {
             <Button
                 color="primary"
                 size="sm"
+                variant="contained"
                 onClick={() => get(route("kanye"))}
             >
                 Refresh

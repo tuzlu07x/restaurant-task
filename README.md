@@ -65,4 +65,4 @@ For more information or documentation about the project, refer to the project's 
     password = 123456789
 ```
 
-And after you logined the page redirect this address http://localhost:8000/kanye
+And after you login the page redirect this address http://localhost:8000/kanye

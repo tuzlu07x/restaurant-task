@@ -9,6 +9,7 @@ import Paper from "@mui/material/Paper";
 import CardActions from "@mui/material/CardActions";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import Button from "@mui/material/Button";
+import Box from "@mui/material/Button";
 import { useForm } from "@inertiajs/react";
 
 export default function List({ restaurants }) {
@@ -68,9 +69,23 @@ export default function List({ restaurants }) {
                                             {row.maximum_capacity}
                                         </TableCell>
                                         <TableCell align="right">
-                                            {row.is_active === 1
-                                                ? "Active"
-                                                : "Not Active"}
+                                            {row.is_active === 1 ? (
+                                                <Box
+                                                    sx={{
+                                                        color: "success.main",
+                                                    }}
+                                                >
+                                                    Active
+                                                </Box>
+                                            ) : (
+                                                <Box
+                                                    sx={{
+                                                        color: "primary.main",
+                                                    }}
+                                                >
+                                                    Not Active
+                                                </Box>
+                                            )}
                                         </TableCell>
                                     </TableRow>
                                 )
@@ -126,9 +141,23 @@ export default function List({ restaurants }) {
                                             {row.maximum_capacity}
                                         </TableCell>
                                         <TableCell align="right">
-                                            {row.is_active === 1
-                                                ? "Active"
-                                                : "Not Active"}
+                                            {row.is_active === 1 ? (
+                                                <Box
+                                                    sx={{
+                                                        color: "success.main",
+                                                    }}
+                                                >
+                                                    Active
+                                                </Box>
+                                            ) : (
+                                                <Box
+                                                    sx={{
+                                                        color: "primary.main",
+                                                    }}
+                                                >
+                                                    Not Active
+                                                </Box>
+                                            )}
                                         </TableCell>
                                     </TableRow>
                                 )
@@ -184,9 +213,23 @@ export default function List({ restaurants }) {
                                             {row.maximum_capacity}
                                         </TableCell>
                                         <TableCell align="right">
-                                            {row.is_active === 1
-                                                ? "Active"
-                                                : "Not Active"}
+                                            {row.is_active === 1 ? (
+                                                <Box
+                                                    sx={{
+                                                        color: "success.main",
+                                                    }}
+                                                >
+                                                    Active
+                                                </Box>
+                                            ) : (
+                                                <Box
+                                                    sx={{
+                                                        color: "primary.main",
+                                                    }}
+                                                >
+                                                    Not Active
+                                                </Box>
+                                            )}
                                         </TableCell>
                                     </TableRow>
                                 )
@@ -242,9 +285,23 @@ export default function List({ restaurants }) {
                                             {row.maximum_capacity}
                                         </TableCell>
                                         <TableCell align="right">
-                                            {row.is_active === 1
-                                                ? "Active"
-                                                : "Not Active"}
+                                            {row.is_active === 1 ? (
+                                                <Box
+                                                    sx={{
+                                                        color: "success.main",
+                                                    }}
+                                                >
+                                                    Active
+                                                </Box>
+                                            ) : (
+                                                <Box
+                                                    sx={{
+                                                        color: "primary.main",
+                                                    }}
+                                                >
+                                                    Not Active
+                                                </Box>
+                                            )}
                                         </TableCell>
                                     </TableRow>
                                 )

@@ -1,4 +1,6 @@
-# Project Usage Guide
+# First Exercise
+
+## Project Usage Guide
 
 This document provides the necessary steps to clone the project, install dependencies, set up the database with seed data, compile frontend assets, and access the RESTful endpoint at /restaurants.
 

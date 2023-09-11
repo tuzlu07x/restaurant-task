@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\KanyeController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RestaurantController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -19,3 +21,9 @@ use Inertia\Inertia;
 //     return Inertia::render('Test');
 // });
 Route::get('/restaurants', [RestaurantController::class, 'index'])->name('restaurant.index');
+Route::get('/login', [LoginController::class, 'page']);
+Route::post('/login', [LoginController::class, 'login'])->name('login');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/kanye', [KanyeController::class, 'index'])->name('kanye');
+});

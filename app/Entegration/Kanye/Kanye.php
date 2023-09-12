@@ -44,12 +44,16 @@ class Kanye
         }
     }
 
-    public function get(string $url, array $data = [])
+    public function get(string $url, array $data = []): array
+    {
+        return $this->request('GET', $url, $data);
+    }
+
+    public function takeSentences(int $quantity): array
     {
         $data = [];
-        for ($i = 0; $i < 5; $i++) {
-            $data[] = $this->request('GET', $url, $data);
-        }
+        for ($i = 1; $i <= $quantity; $i++)
+            $data[] = $this->get($this->baseUri);
 
         return $data;
     }

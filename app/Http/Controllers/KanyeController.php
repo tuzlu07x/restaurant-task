@@ -13,8 +13,8 @@ class KanyeController extends Controller
     {
         $uri = 'https://api.kanye.rest/';
         $kanye = new Kanye($uri);
-        $getRes = new GetResponse($kanye);
-        $kanyeData = $getRes->getRandomSentence($uri);
+        $quantity = 5;
+        $kanyeData = $kanye->takeSentences($quantity);
         //I hadn't used DB. I know that it is not optimize.
         return Inertia::render('Kanye', compact('kanyeData'));
     }

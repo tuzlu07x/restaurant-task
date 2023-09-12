@@ -12,11 +12,11 @@ class RestaurantController extends Controller
 {
     public function index(RestaurantRequest $request)
     {
-        $isActive = $request->input('isActive');
-
+        $data = $request->validated();
+        $isActive = $data['isActive'] ?? null;
         $tables = Table::with('diningArea', 'restaurant')
             ->filter($isActive)
-            ->paginate();
+            ->get();
 
         $restaurants = $tables->groupBy([
             fn (Table $table) => str_replace(' ', '', trim(strtolower($table->restaurant->name))),

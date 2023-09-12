@@ -54,7 +54,7 @@ For more information or documentation about the project, refer to the project's 
 
 # Third Exercise
 
-```
+```php
 <?php
 public function getServiceTimesForRestaurant(Restaurant $restaurant, Carbon $date, $ignoreBookingDuration = false)
 {

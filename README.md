@@ -89,23 +89,23 @@ public function getServiceTimesForRestaurant(Restaurant $restaurant, Carbon $dat
         $close = Carbon::createFromFormat('H:i:s', $service_hour->close); // Kapanış saati
 
         if ($service_hour->enforce_one_sitting) {
-            // Eğer sadece tek oturma düzeni (enforce_one_sitting) varsa, açılış saatini rezervasyon saatleri listesine ekliyoruz.
+            // If there is only one seating arrangement (enforce_one_sitting), we add the opening time to the booking time list.
             $booking_times[] = $open->format('H:i');
             continue;
         }
 
         if ($service_hour->ingore_booking_duration) {
-            // Eğer rezervasyon süresi (booking_duration) görmezden gelinmesi gerekiyorsa, bu durumu işaretliyoruz.
+            // If the booking duration should be ignored, we mark this condition.
             $ignoreBookingDuration = true;
         }
 
         if ($c == count($service_hours) && !$ignoreBookingDuration) {
-            // Son hizmet saatini işliyorsak ve rezervasyon süresini göz ardı etmiyorsak, kapanış saatinden rezervasyon süresini çıkarıyoruz.
+            // If we are processing the last service time and not ignoring the reservation time, we subtract the reservation time from the closing time.
             $close->subMinutes($restaurant->default_booking_duration_hours);
         }
 
-        $diff = $open->diffInMinutes($close); // Açılış ve kapanış saatleri arasındaki farkı hesaplıyoruz.
-        $booking_times[] = $open->format('H:i'); // Açılış saati rezervasyon saatleri listesine ekleniyor.
+        $diff = $open->diffInMinutes($close); // We calculate the difference between opening and closing hours.
+        $booking_times[] = $open->format('H:i'); // Opening time is added to the booking times list.
 
         while ($diff > 0 && ($close->format('i') == '59' || $open->copy()->addMinutes($step)->lte($close))) {
            // Between opening and closing hours it was added booking times that it was determined
